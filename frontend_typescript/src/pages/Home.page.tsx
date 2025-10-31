@@ -6,6 +6,7 @@ import Loader from "../components/Loader.component";
 import { motion } from "motion/react";
 import { AppContext } from "../appContext";
 import type { ExperienceType } from "../modelTypes/ExperienceType";
+import { handleAxiosError } from "../utils/utils";
 
 const Home = () => {
   const { search } = useContext(AppContext);
@@ -34,7 +35,7 @@ const Home = () => {
       });
       setExperiences(data.experiences);
     } catch (error) {
-      toast.error(error.response.data.error);
+      handleAxiosError(error);
     }
   };
 
@@ -44,7 +45,7 @@ const Home = () => {
       const { data } = await axios.get(`${baseUrl}/experiences`);
       setExperiences(data.experiences);
     } catch (error) {
-      toast.error(error.response.data.error);
+      handleAxiosError(error);
     } finally {
       setLoading(false);
     }

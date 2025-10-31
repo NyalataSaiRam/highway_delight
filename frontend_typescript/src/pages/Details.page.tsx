@@ -4,8 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import Loader from "../components/Loader.component";
 import { ArrowLeft } from "lucide-react";
 import DetailsSidePanel from "../components/DetailsSidePanel.component";
-import toast from "react-hot-toast";
 import type { ExperienceType } from "../modelTypes/ExperienceType";
+import { handleAxiosError } from "../utils/utils";
 
 export type detailsInitialType = {
   title: string;
@@ -53,7 +53,7 @@ const Details = () => {
         }));
       }
     } catch (error) {
-      toast.error(error.response.data.error);
+      handleAxiosError(error);
     } finally {
       setLoading(false);
     }

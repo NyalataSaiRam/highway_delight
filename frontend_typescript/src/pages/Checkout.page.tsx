@@ -5,6 +5,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import Loader from "../components/Loader.component";
 import { AppContext } from "../appContext";
+import { handleAxiosError } from "../utils/utils";
 
 const Checkout = () => {
   const navigate = useNavigate();
@@ -52,7 +53,7 @@ const Checkout = () => {
       toast.success("Promo code applied ");
       setDisableApplyBtn(true);
     } catch (error) {
-      toast.error(error.response.data.error);
+      handleAxiosError(error);
     }
     setLoading2(false);
   };
@@ -90,7 +91,7 @@ const Checkout = () => {
       setLoading(false);
       navigate(`/confirmation/${id}`);
     } catch (error) {
-      toast.error(error.response.data.error);
+      handleAxiosError(error);
       setLoading(false);
     }
   };
