@@ -11,7 +11,7 @@ Highway Delight is a full-stack MERN booking application that allows users to br
 | Frontend   | React + TypeScript + Vite + Tailwind CSS |
 | Backend    | Node.js + Express.js |
 | Database   | MongoDB Atlas |
-| Deployment | Render / Netlify |
+| Deployment | Render (Backend) and Netlify (Frontend) |
 
 ---
 
