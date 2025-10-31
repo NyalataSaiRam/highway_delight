@@ -15,14 +15,14 @@ Highway Delight is a full-stack MERN booking application that allows users to br
 
 ---
 
-##  1. Clone the Repository
+## 🗃️ 1. Clone the Repository
 
   ```bash
   git clone https://github.com/NyalataSaiRam/highway_delight.git
   cd highway_delight
   ```
 
-##  2. Backend Setup
+## ⚙️ 2. Backend Setup
   ```
   cd backend
   npm install
@@ -44,7 +44,7 @@ Highway Delight is a full-stack MERN booking application that allows users to br
   http:localhost:5000
   ```
 
-## 3. Frontend Setup
+## 🎨 3. Frontend Setup
 ```
 cd frontend_typescript
 npm install
